@@ -62,6 +62,12 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "sslKey": "certs/dev_localhost.key",
+            "sslCert": "certs/dev_localhost.pem",
+            "port": 4200,
+            "ssl": true
+          },
           "configurations": {
             "production": {
               "browserTarget": "School:build:production"
@@ -97,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b74c8258-c4e5-4e3c-9deb-bcbc33ff5986"
   }
 }
